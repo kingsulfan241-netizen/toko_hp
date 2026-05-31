@@ -1,0 +1,36 @@
+<h1>DATA PEMBELIAN</h1>
+
+<form method="POST">
+    <input type="text" name="nama_barang" placeholder="Nama Barang">
+    <br><br>
+
+    <input type="number" name="jumlah" placeholder="Jumlah">
+    <br><br>
+
+    <input type="number" name="total" placeholder="Total Harga">
+    <br><br>
+
+    <button type="submit">Simpan</button>
+</form>
+
+<hr>
+
+<h2>Data Pembelian</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nama Barang</th>
+        <th>Jumlah</th>
+        <th>Total</th>
+    </tr>
+
+    {% for data in pembelian %}
+    <tr>
+        <td>{{ data[0] }}</td>
+        <td>{{ data[1] }}</td>
+        <td>{{ data[2] }}</td>
+        <td>{{ data[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
