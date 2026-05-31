@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Barang</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align:center;
+        }
+
+        h2{
+            background: #2196F3;
+            color:white;
+            padding:15px;
+        }
+
+        table{
+            margin:auto;
+            border-collapse:collapse;
+            width:70%;
+        }
+
+        th{
+            background:#2196F3;
+            color:white;
+            padding:10px;
+        }
+
+        td{
+            padding:10px;
+            border:1px solid #ccc;
+        }
+
+        tr:nth-child(even){
+            background:#f2f2f2;
+        }
+
+        .btn{
+            background:#2196F3;
+            color:white;
+            padding:10px 20px;
+            text-decoration:none;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>DATA BARANG</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nama Barang</th>
+        <th>Harga</th>
+    </tr>
+
+    {% for barang in data %}
+    <tr>
+        <td>{{ barang[0] }}</td>
+        <td>{{ barang[1] }}</td>
+        <td>Rp {{ barang[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="/" class="btn">Kembali ke Menu Utama</a>
+
+</body>
+</html>
